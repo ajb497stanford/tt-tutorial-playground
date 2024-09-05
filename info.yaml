@@ -18,12 +18,13 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
+    - "full_adder_cp.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
+  ui[0]: "a"
+  ui[1]: "b"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
@@ -32,9 +33,9 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
+  uo[0]: "prop"
+  uo[1]: "gen"
+  uo[2]: "sout"
   uo[3]: ""
   uo[4]: ""
   uo[5]: ""

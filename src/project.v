@@ -20,9 +20,9 @@ module tt_um_example (
         .a(ui_in[0]),
         .b(ui_in[1]),
         .cin(),
-        .prop(uo_out[0]),
-        .gen(uo_out[1]),
-        .sout(uo_out[2])
+        .prop(fa_prop),
+        .gen(fa_gen),
+        .sout(fa_sout)
     );
     wire fa_prop;
     wire fa_gen;

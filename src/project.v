@@ -28,7 +28,7 @@ module tt_um_example (
     wire fa_gen;
     wire fa_sout;
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
+  //assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
     assign uo_out[0] = fa_prop;
     assign uo_out[1] = fa_gen;
     assign uo_out[2] = fa_sout;

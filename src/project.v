@@ -16,8 +16,23 @@ module tt_um_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    full_adder_cp fa (
+        .a(ui_in[0]),
+        .b(ui_in[1]),
+        .cin(),
+        .prop(uo_out[0]),
+        .gen(uo_out[1]),
+        .sout(uo_out[2])
+    )
+    wire fa_prop;
+    wire fa_gen;
+    wire fa_sout;
   // All output pins must be assigned. If not used, assign to 0.
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
+    assign uo_out[0] = fa_prop;
+    assign uo_out[1] = fa_gen;
+    assign uo_out[2] = fa_sout;
+    assign uo_out[7:3] = 0;
   assign uio_out = 0;
   assign uio_oe  = 0;
 
